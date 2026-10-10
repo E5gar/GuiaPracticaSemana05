@@ -5,7 +5,8 @@ export const marca = {
   telefono: '+51 900 123 456',
   whatsapp: 'https://wa.me/51900123456',
   correo: 'hola@lobbyjuegos.pe',
-  horario: 'Todos los días, de 9:00 a 23:00'
+  horario: 'Todos los días, de 9:00 a 23:00',
+  direccion: 'Perú',
 };
 
 export const navegacion = [

@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), babel({ presets: [reactCompilerPreset()] }), react(), tailwindcss()],
+  plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
   resolve: {
     alias: {
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
