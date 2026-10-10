@@ -1,0 +1,85 @@
+.boton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.35em 0.35em 0.35em 1.3em;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius-pill);
+  background: var(--fondo-boton);
+  color: var(--texto-boton);
+  font: 500 var(--fs-body-s) / 1 var(--font-main);
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--t-regular);
+}
+
+.fondo {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 0.35em;
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: var(--radius-pill);
+  background: var(--fondo-circulo);
+  transform: translateY(-50%);
+  transition: width var(--t-long);
+}
+
+.texto {
+  position: relative;
+}
+
+.icono {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.4em;
+  height: 2.4em;
+  color: var(--color-circulo);
+}
+
+.icono svg {
+  transition: transform var(--t-regular);
+}
+
+.boton:hover {
+  color: var(--color-circulo);
+}
+
+.boton:hover .fondo {
+  width: calc(100% - 0.7em);
+}
+
+.boton:hover .icono svg {
+  transform: rotate(45deg);
+}
+
+.primario {
+  --borde: var(--text);
+  --fondo-boton: var(--text);
+  --texto-boton: var(--bg);
+  --fondo-circulo: var(--bg);
+  --color-circulo: var(--text);
+}
+
+.contorno {
+  --borde: color-mix(in srgb, var(--text) 40%, transparent);
+  --fondo-boton: transparent;
+  --texto-boton: var(--text);
+  --fondo-circulo: var(--text);
+  --color-circulo: var(--bg);
+}
+
+.acento {
+  --borde: var(--color-accent);
+  --fondo-boton: var(--color-accent);
+  --texto-boton: var(--color-dark);
+  --fondo-circulo: var(--color-dark);
+  --color-circulo: var(--color-accent);
+}
