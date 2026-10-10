@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import useReveal from '@hooks/useReveal'
+import PropTypes from 'prop-types';
+import useReveal from '@hooks/useReveal';
 
-function Reveal({ as: Elemento = 'div', retraso = 0, className, children }) {
-  const [ref, visible] = useReveal()
-  const clases = [className, visible ? 'is-visible' : ''].filter(Boolean).join(' ')
+function Reveal({ as: Elemento = 'div', retraso = 0, className, children, ...resto }) {
+  const [ref, visible] = useReveal();
+  const clases = [className, visible ? 'is-visible' : ''].filter(Boolean).join(' ');
 
   return (
     <Elemento
@@ -11,10 +11,11 @@ function Reveal({ as: Elemento = 'div', retraso = 0, className, children }) {
       data-reveal
       className={clases || undefined}
       style={{ transitionDelay: `${retraso}ms` }}
+      {...resto}
     >
       {children}
     </Elemento>
-  )
+  );
 }
 
 Reveal.propTypes = {
@@ -22,6 +23,6 @@ Reveal.propTypes = {
   retraso: PropTypes.number,
   className: PropTypes.string,
   children: PropTypes.node,
-}
+};
 
-export default Reveal
+export default Reveal;
