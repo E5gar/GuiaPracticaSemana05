@@ -1,0 +1,31 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.cabecera {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap-l);
+}
+
+.descripcion {
+  max-width: 44ch;
+  color: var(--text-muted);
+  font-size: var(--fs-body-s);
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+@media (max-width: 960px) {
+  .rejilla {
+    grid-template-columns: 1fr;
+  }
+}
