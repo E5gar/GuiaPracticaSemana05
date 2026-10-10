@@ -1,0 +1,18 @@
+.seccion {
+  padding-block: var(--space-section);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-margin);
+}
+
+@media (max-width: 960px) {
+  .seccion {
+    padding-block: clamp(60px, 12.5vw, 80px);
+  }
+}
