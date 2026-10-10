@@ -1,0 +1,19 @@
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--tag-bg);
+  font-size: var(--fs-tag);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.acento {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
